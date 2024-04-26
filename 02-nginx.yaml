@@ -1,6 +1,6 @@
 - name: Install and run nginx
-  hosts:[web]
-  become:yes #equal to -b in adhoc command, getting root access
+  hosts: [web]
+  become: yes #equal to -b in adhoc command, getting root access
   tasks:
   - name: install nginx
     ansible.builtin.package:
