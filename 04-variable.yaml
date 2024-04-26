@@ -1,0 +1,6 @@
+- name: variables
+  hosts: localhost
+  tasks:
+  - name: Print Information
+    ansible.builtin.debug:
+      msg: "Hi,I'm learning ansible from abc,duration is 3.5 months"
