@@ -5,10 +5,14 @@
     Trainer: "Abc"
     Duration: "3.5months"
   tasks:
-  - name: Print Information
+  - name: Print Override Information
     vars:
       Course: "Terraform"
       Trainer: "XXX"
       Duration: "2months"
+    ansible.builtin.debug:
+      msg: "Hi,I'm learning {{Course}} from trainer {{Trainer}}, duration is {{Duration}}"
+
+  - name: Print Information
     ansible.builtin.debug:
       msg: "Hi,I'm learning {{Course}} from trainer {{Trainer}}, duration is {{Duration}}"
