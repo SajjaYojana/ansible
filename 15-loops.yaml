@@ -3,7 +3,7 @@
   tasks:
   - name: print the tools 
     ansible.builtin.debug
-      msg: "Hello, I'm {{tools}}"
+      msg: "Hello, I'm {{ items }}}"
     loop: 
       - Shell
       - Ansible
