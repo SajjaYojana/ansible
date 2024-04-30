@@ -64,7 +64,7 @@
     - {'key':'trainer', 'value':'abc'}
   tasks:
   - name: Before conversion
-    ansible.built.debug:
+    ansible.builtin.debug:
       msg: "{{ list }}"
 
   - name: After conversion
