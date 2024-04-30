@@ -18,4 +18,4 @@
     yc: "HII, CHIKRI"
   - name: print lowercase
     ansible.builtin.debug:
-      msg: "{{yc | lower}}
+      msg: "{{yc | lower}}"
