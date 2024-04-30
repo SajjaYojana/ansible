@@ -39,4 +39,17 @@
   tasks:  
   - name: print min and max 
     ansible.builtin.debug:
-      msg: "THe min number is: {{numbers | min }} and max number is : {{numbers | max}}"            
+      msg: "THe min number is: {{numbers | min }} and max number is : {{numbers | max}}"
+
+- name: Convert dict to list
+  hosts: localhost
+  vars:
+    dict:
+      course: "devops"
+      trainer: "xyz"
+  tasks:
+  - name: print a list
+    ansible.builtin.debug:
+      msg: "{{dict | dict2items}}"      
+
+
