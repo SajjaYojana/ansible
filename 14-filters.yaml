@@ -48,8 +48,13 @@
       course: "devops"
       trainer: "xyz"
   tasks:
-  - name: print a list
+  - name: before convertion
     ansible.builtin.debug:
-      msg: "{{dict | dict2items}}"      
+      msg: "{{ dict }}" 
+
+  - name: after conversion
+    ansible.builtin.debug:
+      msg: "{{ dict | dict2items }}"    
+
 
 
