@@ -2,7 +2,7 @@
   hosts: localhost
   tasks:
   - name: print the tools 
-    ansible.builtin.debug
+    ansible.builtin.debug:
       msg: "Hello, I'm {{ item }}}"
     loop: 
       - Shell
