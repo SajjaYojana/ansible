@@ -7,8 +7,10 @@
 
 - name: upper
   hosts: localhost
+  vars:
+    yc: " hello yojana"
   tasks:
   - name: Print uppercase
     ansible.builtin.debug:
-      msg: " hello yojana | upper"
+      msg: " {{ yc | upper }}"
 
