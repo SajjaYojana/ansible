@@ -22,3 +22,12 @@
   - name: print lowercase
     ansible.builtin.debug:
       msg: "{{yc | lower}}"
+
+- name: duplicates
+  hosts: localhost
+  vars:
+   numbers: [1,3,5,8,7,3,5]
+  tasks:  
+  - name: print unique numbers and remove duplicates 
+    ansible.builtin.debug:
+      msg: "{{numbers | unique}}"      
