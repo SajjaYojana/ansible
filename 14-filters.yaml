@@ -69,7 +69,7 @@
 
   - name: After conversion
     ansible.builtin.debug:
-      msg: "{{ list | list2dict }}"         
+      msg: "{{ list | items2dict }}"         
 
 
 
