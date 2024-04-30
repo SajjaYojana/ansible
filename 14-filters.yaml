@@ -5,7 +5,7 @@
     ansible.builtin.debug:
       msg: "Hello {{ Course | default('Ansible')}}"
 
-- name: upper case and lower case
+- name: upper case
   hosts: localhost
   vars:
     yc: "hello, yojana"
@@ -14,8 +14,11 @@
     ansible.builtin.debug:
       msg: "{{ yc | upper }}"
 
+- name: lower case
+  hosts: localhost
   vars:
     yc: "HII, CHIKRI"
+  tasks:  
   - name: print lowercase
     ansible.builtin.debug:
       msg: "{{yc | lower}}"
