@@ -1,0 +1,12 @@
+- name: loops
+  hosts: localhost
+  tasks:
+  - name: print the tools 
+    ansible.builtin.debug
+      msg: "Hello, I'm {{tools}}"
+    loop: 
+      - Shell
+      - Ansible
+      - Jenkins
+      - Terraform
+      - Docker
