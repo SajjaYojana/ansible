@@ -1,0 +1,8 @@
+- name:
+  hosts: localhost
+  tasks:
+  - name: command module
+    ansible.builtin.command: "echo 'Hi,I'm from command module' > /tmp/command.txt "
+
+  - name: Shell module
+    ansible.builtin.shell: "echo 'Hi,I'm from shell module' > /tmp/shell.txt "
